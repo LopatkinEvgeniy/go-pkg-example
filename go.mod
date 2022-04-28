@@ -2,7 +2,10 @@ module github.com/LopatkinEvgeniy/go-pkg-example
 
 go 1.17
 
-require github.com/spf13/cobra v1.4.0
+require (
+	github.com/LopatkinEvgeniy/go-pkg-example/pkg/mylib v1.0.0
+	github.com/spf13/cobra v1.4.0
+)
 
 require (
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
