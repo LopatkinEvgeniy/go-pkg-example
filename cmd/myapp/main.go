@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/LopatkinEvgeniy/go-pkg-example/internal/mylib"
+	"github.com/LopatkinEvgeniy/go-pkg-example/pkg/mylib"
 	"github.com/spf13/cobra"
 )
 
