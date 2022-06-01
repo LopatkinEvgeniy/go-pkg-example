@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/LopatkinEvgeniy/go-pkg-example/pkg/deep/level1/level2/deeplib"
 	"github.com/LopatkinEvgeniy/go-pkg-example/pkg/mylib"
 	"github.com/spf13/cobra"
 )
@@ -16,7 +17,14 @@ func main() {
 		Use:   "test",
 		Short: "my test program",
 		Run: func(cmd *cobra.Command, args []string) {
-			fmt.Printf("sum of %d and %d is %d\n", a, b, mylib.Add(a, b))
+			sum := mylib.Add(a, b)
+			fmt.Printf("sum of %d and %d is %d\n", a, b, sum)
+
+			if deeplib.IsOdd(sum) {
+				fmt.Println("sum is odd")
+			} else {
+				fmt.Println("sum is even")
+			}
 		},
 	}
 
